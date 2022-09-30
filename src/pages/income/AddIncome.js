@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
-import { useHistory } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import moneySVG from "../../img/money.svg";
@@ -15,7 +15,7 @@ const formSchema = Yup.object({
 });
 
 const AddIncome = () => {
-    const history = useHistory();
+    const history = useNavigate();
     //dispatch
     const dispatch = useDispatch();
     //formik form

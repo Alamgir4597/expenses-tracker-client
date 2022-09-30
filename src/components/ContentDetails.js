@@ -1,11 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import currencyFormatter from "../utilies/cuurencyFormatter";
 import dateFormatter from "../utilies/dateFormatter";
 
 const ContentDetails = ({ item }) => {
     console.log(item);
-    const history = useHistory();
+    const history = useNavigate();
     return (
         <>
             <tr className="align-middle text-dark">

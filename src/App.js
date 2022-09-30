@@ -1,9 +1,5 @@
 import React from 'react';
-import { BrowserRouter,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch, } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import "./App.css";
 import EditContent from "./components/EditContent";
 // import AdminRoute from "./components/navigation/AdminRoute";
@@ -25,9 +21,9 @@ import UserProfileIncList from "./pages/users/UserProfileIncList";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
-      <Switch>
+      
         <Route exact path="/" component={Home} />
         <ProtectedRoute exact path="/expenses" component={ExpensesList} />
         <ProtectedRoute exact path="/incomes" component={IncomeList} />
@@ -54,8 +50,8 @@ function App() {
         <ProtectedRoute exact path="/profile" component={Profile} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-      </Switch>
-    </BrowserRouter>
+     
+    </Router>
   );
 }
 

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { updateProfileAction } from "../../redux/slices/users/usersSlices";
 import LoadingComponent from "../../components/Loading";
 import ErrorDisplayMessage from "../../components/ErrorDisplayMessage";
@@ -17,7 +17,7 @@ const formSchema = Yup.object({
 
 const UpdateProfile = ({ location: { state } }) => {
     //history
-    const history = useHistory();
+    const history = useNavigate();
     //get data from store
     const user = useSelector(state => state?.users);
     const { userAppErr, userServerErr, userLoading, isEdited } = user;

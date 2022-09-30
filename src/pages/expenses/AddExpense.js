@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useHistory } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import moneySVG from "../../img/money.svg";
 import { createExpAction } from "../../redux/slices/expenses/expensesSlices";
@@ -16,7 +16,7 @@ const formSchema = Yup.object({
 });
 
 const AddExpense = props => {
-    const history = useHistory();
+    const history = useNavigate();
     //dispatch
     const dispatch = useDispatch();
     //formik form

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { registerUserAction } from "../../redux/slices/users/usersSlices";
 import DisabledButton from "../../components/DisabledButton";
@@ -16,7 +16,7 @@ const formSchema = Yup.object({
 
 const Register = () => {
     //history
-    const history = useHistory();
+    const history = useNavigate();
     //get data from store
     const user = useSelector(state => state?.users);
     const { userAppErr, userServerErr, userLoading, isRegistered } = user;

@@ -1,9 +1,9 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import dateFormatter from "../../utilies/dateFormatter";
 
 const UserProfileContentDetails = ({ item }) => {
-    const history = useHistory();
+    const history = useNavigate();
     return (
         <tr className="align-middle text-dark">
             <td className="p-6">{item?.title}</td>

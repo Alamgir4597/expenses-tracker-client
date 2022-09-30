@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useFormik } from "formik";
-import { useHistory } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
 import { loginUserAction } from "../../redux/slices/users/usersSlices";
@@ -14,7 +14,7 @@ const formSchema = Yup.object({
 
 const Login = () => {
   //history
-  const history = useHistory();
+  const history = useNavigate();
 
   //dispatch
   const dispatch = useDispatch();

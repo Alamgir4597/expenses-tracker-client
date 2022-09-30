@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { userProfileAction } from "../../redux/slices/users/usersSlices";
 import GraphDtata from "../../components/GraphDtata";
 import calcTransaction from "../../utilies/cuurencyFormatter";
@@ -10,7 +10,7 @@ import ErrorDisplayMessage from "../../components/ErrorDisplayMessage";
 
 const Profile = () => {
     const dispatch = useDispatch();
-    const history = useHistory();
+    const history = useNavigate();
     useEffect(() => {
         dispatch(userProfileAction());
     }, [dispatch]);

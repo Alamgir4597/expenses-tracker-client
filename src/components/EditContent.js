@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch, useSelector } from 'react - redux';
+import { useDispatch, useSelector } from 'react-redux';
 import moneySVG from "../img/money.svg";
 
 import DisabledButton from "./DisabledButton";

@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import LoadingComponent from "../../components/Loading";
 import ErrorDisplayMessage from "../../components/ErrorDisplayMessage";
-import { fetchAccountStatsAction } from "../../redux/slices/accountsStats/accountStatSlices";
+import { fetchAccountStatsAction } from "../../redux/slices/AccountState/accountStatSlices";
 import GraphDtata from "../../components/GraphDtata";
-import currencyFormatter from "../../utils/cuurencyFormatter";
+import currencyFormatter from "../../utilies/cuurencyFormatter";
 
 const DashboardData = () => {
     const dispatch = useDispatch();
